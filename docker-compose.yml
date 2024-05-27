@@ -1,0 +1,17 @@
+# Version de Docker-compose
+version: '3.9'
+services:
+  react:
+  # Location du Dockerfile react.js
+    build: 
+      context: .
+        # Nom du dockerfile
+      dockerfile: Dockerfile
+    container_name: react-container
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    environment:
+      - WATCHPACK_POLLING=true
+    volumes:
+       - .:/app
