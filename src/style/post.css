@@ -1,0 +1,13 @@
+.posts-list {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 1400px;
+}
+
+.post {
+    border-radius: 10px;
+    overflow: hidden;
+    max-height: 450px;
+    border: none;
+}

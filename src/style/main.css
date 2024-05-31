@@ -56,3 +56,15 @@ body {
 .col a {
     text-decoration: none;
 }
+
+.button-primary {
+    border-radius: 30px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 3px solid #000;
+    color: #000;
+}
+
+.button-primary:hover {
+    transform: scale(1.1, 1.1);
+}
