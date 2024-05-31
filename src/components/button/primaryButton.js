@@ -1,4 +1,4 @@
-const SearchButton = ({label}) => {
+const PrimaryButton = ({label}) => {
     return (
         <div className="mt-5">
             <button className="button-primary" type="submit">{label}</button>
@@ -6,4 +6,4 @@ const SearchButton = ({label}) => {
     )
 }
 
-export default SearchButton;
+export default PrimaryButton;

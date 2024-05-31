@@ -12,7 +12,7 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse">
                         <div className="navbar-nav">
                             <a className="nav-link" href="/">ANNONCES</a>
-                            <a className="nav-link" href="/">CONTACT</a>
+                            <a className="nav-link" href="/contact">CONTACT</a>
                             <a className="nav-link" href="/">RESSOURCES</a>
                         </div>
                         <div className="navbar-nav ms-auto">
