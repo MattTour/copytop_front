@@ -1,14 +1,14 @@
 import Searchbar from "./searchbar";
 import Tags from "./tags";
 import "../../style/search.css"
-import SearchButton from "../button/searchButton";
+import PrimaryButton from "../button/primaryButton";
 
 const SearchZone = () => {
     return (
         <div className="search-zone">
             <Searchbar />
             <Tags />
-            <SearchButton label="Rechercher" />
+            <PrimaryButton label="Rechercher" />
         </div>
     )
 }
