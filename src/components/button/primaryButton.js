@@ -1,7 +1,7 @@
-const PrimaryButton = ({label}) => {
+const PrimaryButton = ({label, actionOnClick}) => {
     return (
-        <div className="mt-5">
-            <button className="button-primary" type="submit">{label}</button>
+        <div>
+            <button className="button-primary" type="submit" onClick={actionOnClick}>{label}</button>
         </div>
     )
 }

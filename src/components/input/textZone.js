@@ -1,7 +1,7 @@
-const TextZone = () => {
+const TextZone = ({onChangeAction}) => {
     return (
         <div className="">
-            <textarea className="text-zone" id="textzone" placeholder="Entrez le contenu de votre message..."/>
+            <textarea onChange={(e)=>onChangeAction(e.target.value)} className="text-zone" id="textzone" placeholder="Entrez le contenu de votre message..."/>
         </div>
     )
 }

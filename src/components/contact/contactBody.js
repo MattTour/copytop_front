@@ -6,7 +6,9 @@ const ContactBody = () => {
         <div className="container mt-5">
             <div className="row">
                 <TextZone />
-                <PrimaryButton label="Envoyer"/>
+                <div className="mt-2">
+                    <PrimaryButton label="Envoyer"/>
+                </div>
             </div>
         </div>
     )
