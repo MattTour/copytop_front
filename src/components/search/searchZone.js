@@ -8,7 +8,9 @@ const SearchZone = () => {
         <div className="search-zone">
             <Searchbar />
             <Tags />
-            <PrimaryButton label="Rechercher" />
+            <div className="mt-5">
+                <PrimaryButton label="Rechercher" />
+            </div>
         </div>
     )
 }
