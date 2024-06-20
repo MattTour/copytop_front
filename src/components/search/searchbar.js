@@ -1,7 +1,7 @@
-const Searchbar = () => {
+const Searchbar = ({onChangeAction}) => {
     return (
         <div className="">
-            <input className="searchbar" type="text" placeholder="Entrez votre recherche..."/>
+            <input className="searchbar" type="text" onChange={(e)=>onChangeAction(e.target.value)} placeholder="Entrez votre recherche..."/>
         </div>
     )
 }

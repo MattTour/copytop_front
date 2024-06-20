@@ -5,8 +5,9 @@ import PrimaryButton from '../button/primaryButton';
 
 const PostsWall = ({showPopup}) => {
     const [posts, setPosts] = useState([]);
+
     useEffect(() => {
-        fetch('http://localhost:5001/api/post/search')
+        fetch('http://localhost:5001/api/post/search/' + window.location.search)
             .then((res) => {
                 return res.json();
             })

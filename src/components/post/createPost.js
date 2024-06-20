@@ -3,8 +3,9 @@ import PrimaryButton from '../button/primaryButton';
 import TitleInput from '../input/titleInput';
 import { useNavigate } from "react-router-dom";
 import React, {useState} from "react";
+import Tags from '../search/tags';
 
-async function SendNewPost(title, content) {
+async function SendNewPost(title, content, tags) {
     return fetch('http://localhost:5001/api/post/create',{
         method: 'POST',
         headers:{
@@ -12,7 +13,8 @@ async function SendNewPost(title, content) {
         },
         body: new URLSearchParams({
             'title': title,
-            'content': content
+            'content': content,
+            'tags': tags
         })
     })
     .then(data => {
@@ -27,6 +29,7 @@ async function SendNewPost(title, content) {
 const CreatePost = ({showPopup}) => {
     const navigate = useNavigate();
 
+    const [tags, setTags] = useState([]);
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
 
@@ -34,12 +37,24 @@ const CreatePost = ({showPopup}) => {
         e.preventDefault();
         const createNewPost = await SendNewPost(
             title,
-            content
+            content,
+            tags
         );
         if (createNewPost !== null) {
             navigate(0);
         }
     }
+
+    const handleChange = (e) => {
+        const { value, checked } = e.target;
+
+        if (checked) {
+            setTags([...tags, value]);
+        }
+        else {
+            setTags(tags.filter((e) => e !== value));
+        }
+    };
 
     function hidePopupInParent() {
         showPopup(false);
@@ -62,6 +77,9 @@ const CreatePost = ({showPopup}) => {
                     </div>
                     <div>
                         <TextZone onChangeAction={changeContent} />
+                    </div>
+                    <div>
+                        <Tags onChangeAction={handleChange} />
                     </div>
                     <div className="d-flex justify-content-evenly mt-4">
                         <PrimaryButton label="Annuler" actionOnClick={hidePopupInParent}/>
