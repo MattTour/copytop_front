@@ -72,3 +72,13 @@ body {
 .image-btn {
     width: 30px;
 }
+
+.notif-btn {
+    opacity: 0;
+    margin-left: -60px;
+}
+
+.notif-btn button {
+    width: 40px;
+    height: 40px;
+}
