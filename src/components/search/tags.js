@@ -14,12 +14,12 @@ const Tags = ({onChangeAction}) => {
     }, []);
 
     return (
-        <div className="">
+        <div className="mt-2">
             {tags.map((tag, index) => (
-                <div key={index}>
-                    <input type="checkbox" className="btn-check" name="tags" id={tags.id} value={tags.id} autoComplete="off" onChange={onChangeAction} />
-                    <label className="btn tag" htmlFor={tags.id}>{tags.name}</label>
-                </div>
+                <span key={index}>
+                    <input type="checkbox" className="btn-check" name="tags" id={tag.id} value={tag.id} autoComplete="off" onChange={onChangeAction} />
+                    <label className="btn tag" htmlFor={tag.id}>{tag.name}</label>
+                </span>
             ))}
         </div>
     )

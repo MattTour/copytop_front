@@ -68,3 +68,7 @@ body {
 .button-primary:hover {
     transform: scale(1.1, 1.1);
 }
+
+.image-btn {
+    width: 30px;
+}
