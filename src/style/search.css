@@ -1,0 +1,38 @@
+.search-zone {
+    border-left: 2px solid #e40916;
+    padding-left: 20px;
+    height: 100%;
+}
+
+.searchbar {
+    border-radius: 30px;
+    border: 2px solid #808080;
+    padding: 5px 10px;
+}
+
+.tag {
+    border-radius: 30px;
+    padding: 5px 10px;
+    border: 3px solid #e40916;
+    background-color: #fff;
+    color: #e40916;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.tag:hover {
+    background-color: #e40916;
+    color: #fff;
+}
+
+.btn-check + .btn:hover {
+    border: 3px solid #e40916;
+    background-color: #e40916;
+    color: #fff;
+}
+
+.btn-check:checked + .btn {
+    border: 3px solid #e40916;
+    background-color: #e40916;
+    color: #fff;
+}

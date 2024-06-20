@@ -1,16 +1,16 @@
 import Navbar from '../components/navbar/navbar';
 import Footer from '../components/footer/footer';
-import HomeBody from '../components/home/homeBody';
+import ContactBody from '../components/contact/contactBody';
 
-import '../style/home.css';
+import "../style/input.css"
 
-const Home = () => {
+const Contact = () => {
     return (<>
         <Navbar />
-        <HomeBody />
+        <ContactBody />
         <Footer />
     </>
     )
 }
 
-export default Home;
+export default Contact;
